@@ -51,15 +51,20 @@ const processData = (data) => {
         result.odd_numbers.push(numberToString(num));
       }
     } else if (str.length > 0) {
-      // Process each character in the string
-      [...str].forEach(char => {
-        if (isAlphabet(char)) {
-          result.alphabets.push(char.toUpperCase());
-          alphabetsArray.push(char);
-        } else if (isSpecialChar(char)) {
-          result.special_characters.push(char);
-        }
-      });
+      // Check if string contains only alphabets
+      if (str.split('').every(char => isAlphabet(char))) {
+        result.alphabets.push(str.toUpperCase());
+        alphabetsArray.push(...str.split(''));
+      } else {
+        // Process each character in the string
+        [...str].forEach(char => {
+          if (isAlphabet(char)) {
+            alphabetsArray.push(char);
+          } else if (isSpecialChar(char)) {
+            result.special_characters.push(char);
+          }
+        });
+      }
     }
   });
 

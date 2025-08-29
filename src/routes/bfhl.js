@@ -22,9 +22,9 @@ router.post('/', (req, res) => {
     // Return response with required fields
     res.status(200).json({
       is_success: true,
-      user_id: "hardik_hasan_29082025", // hardcoded as per requirement
-      email: "john@xyz.com", // hardcoded as per requirement
-      roll_number: "ABCD123", // hardcoded as per requirement
+      user_id: "john_doe_17091999",
+      email: "john@xyz.com",
+      roll_number: "ABCD123",
       ...result
     });
   } catch (error) {
