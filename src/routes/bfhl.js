@@ -22,9 +22,9 @@ router.post('/', (req, res) => {
     // Return response with required fields
     res.status(200).json({
       is_success: true,
-      user_id: "john_doe_17091999",
-      email: "john@xyz.com",
-      roll_number: "ABCD123",
+      user_id: "hardik_hasani_17091999",
+      email: "hardik.hasani2022@vitstudent.ac.in",
+      roll_number: "22BCE1397",
       ...result
     });
   } catch (error) {
